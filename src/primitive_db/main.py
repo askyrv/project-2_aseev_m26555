@@ -1,6 +1,19 @@
 #!/usr/bin/env python3
+from .engine import welcome
+
+
 def main():
-    print("DB project is running!")
+    welcome() 
+    while True:
+        command = input("Введите команду: ")  
+        if command == "exit":
+            print("До свидания!")
+            break
+        elif command == "help":
+            welcome()
+        else:
+            print("Неизвестная команда. Попробуйте 'help'.")
 
 if __name__ == "__main__":
-    main()
+    main() 
+    
